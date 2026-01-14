@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lyrics Word Cloud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.py">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎵 Lyrics Word Cloud Generator</h1>
+
+    <form method="POST">
+        <input type="text" name="artist" placeholder="Artist Name" required>
+        <input type="text" name="song" placeholder="Song Name" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if image %}
+        <h2>Word Cloud</h2>
+        <img src="" alt="Word Cloud">
+    {% endif %}
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+</div>
+<link rel="stylesheet" href="app.py">
+<script src="script.js"></script>
+</body>
+</html>
